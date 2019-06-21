@@ -1,6 +1,5 @@
 import { NgModule, SkipSelf, Optional } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { MatToolbarModule, MatIconModule, MatButtonModule } from '@angular/material';
+import { SharedModule } from '../shared/shared.module';
 import { HttpClientModule } from '@angular/common/http';
 import { MatIconRegistry } from '@angular/material';
 import { DomSanitizer } from '@angular/platform-browser';
@@ -10,6 +9,7 @@ import { FooterComponent } from './footer/footer.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { loadSvgResources } from '../utils/svg.utils';
 
+
 @NgModule({
   declarations: [
     HeaderComponent,
@@ -17,11 +17,8 @@ import { loadSvgResources } from '../utils/svg.utils';
     SidebarComponent
   ],
   imports: [
-    CommonModule,
     HttpClientModule,
-    MatToolbarModule,
-    MatIconModule,
-    MatButtonModule
+    SharedModule
   ],
   exports: [
     HeaderComponent, FooterComponent, SidebarComponent
