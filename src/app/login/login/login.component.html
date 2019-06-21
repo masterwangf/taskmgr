@@ -1,19 +1,38 @@
-<mat-card>
-  <mat-card-header>
-    <mat-card-title>登录：</mat-card-title>
-  </mat-card-header>
-  <mat-card-content>
-    <mat-form-field color="primary" floatPlaceholder="float" appearance="outline">  <!--floatPlaceholder: 'always' | 'float'(default) | 'never'; hintLabel="string"-->
-      <!-- <span matPrefix><mat-icon>mail</mat-icon></span>  -->
-      <mat-label>邮箱</mat-label>
-      <span matSuffix>@gmail.com</span>
-      <input matInput type="text" placeholder="您的email">
-      <mat-hint>Hint</mat-hint>
-    </mat-form-field>
-  
-  </mat-card-content>
-  <mat-card-actions>
-    <p>还没有账户？<a href="">注册</a></p>
-    <p>忘记密码？<a href="">找回</a></p>
-  </mat-card-actions>
-</mat-card>
+<form>
+  <mat-card>
+      <mat-card-header>
+        <mat-card-title>登录：</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <mat-form-field color="primary" floatPlaceholder="float" class="full-width"> 
+          <!--floatPlaceholder: 'always' | 'float'(default) | 'never'; hintLabel="string"； align: 'end' | 'start';appearance: "outline" | ...-->
+          <!-- <span matPrefix><mat-icon>mail</mat-icon></span>  -->
+          <mat-label>邮箱</mat-label>
+          <!-- <span matSuffix>@gmail.com</span> -->
+          <input matInput type="text" placeholder="您的email">
+          <!-- <mat-hint>Hint</mat-hint> -->
+        </mat-form-field>
+        <mat-form-field color="primary" floatPlaceholder="float" class="full-width"> 
+          <mat-label>密码</mat-label>
+          <input matInput type="password" placeholder="您的密码">
+          <!-- <mat-hint>Hint</mat-hint> -->
+        </mat-form-field>
+        <button mat-raised-button type="button" color="primary">登录</button>
+      </mat-card-content>
+      <mat-card-actions class="text-right">
+        <p>还没有账户？<a href="">注册</a></p>
+        <p>忘记密码？<a href="">找回</a></p>
+      </mat-card-actions>
+    </mat-card>
+
+    <mat-card>
+        <mat-card-header>
+          <mat-card-title>每日佳句</mat-card-title>
+          <mat-card-subtitle>Lorem ipsum dolor sit amet consectetur adipisicing elit.</mat-card-subtitle>
+        </mat-card-header>
+        <img mat-card-image src="assets/img/quote_fallback.jpg" alt="">
+        <mat-card-content>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptas explicabo, qui itaque voluptatem delectus saepe aut, molestias quam debitis labore neque rerum animi dignissimos nemo tempora.
+        </mat-card-content>
+      </mat-card>
+</form>
