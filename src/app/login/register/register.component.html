@@ -1,0 +1,39 @@
+<form>
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>注册：</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <mat-form-field color="primary" class="full-width">
+        <mat-label>邮箱</mat-label>
+        <input matInput type="text" placeholder="您的email">
+      </mat-form-field>
+      <mat-form-field color="primary" class="full-width">
+        <mat-label>姓名</mat-label>
+        <!-- <span matSuffix>@gmail.com</span> -->
+        <input matInput type="text" placeholder="您的姓名">
+        <!-- <mat-hint>Hint</mat-hint> -->
+      </mat-form-field>
+      <mat-form-field color="primary" floatPlaceholder="float" class="full-width">
+        <mat-label>密码</mat-label>
+        <input matInput type="password" placeholder="您的密码">
+        <!-- <mat-hint>Hint</mat-hint> -->
+      </mat-form-field>
+      <mat-form-field color="primary" floatPlaceholder="float" class="full-width">
+        <mat-label>确认密码</mat-label>
+        <input matInput type="password" placeholder="重复您的密码">
+        <!-- <mat-hint>Hint</mat-hint> -->
+      </mat-form-field>
+      <mat-grid-list cols="6">
+        <mat-grid-tile *ngFor="let item of items">
+          <mat-icon [svgIcon]="item" class="avatar"></mat-icon>
+        </mat-grid-tile>
+      </mat-grid-list>
+      <button mat-raised-button type="button" color="accent">点击注册</button>
+    </mat-card-content>
+    <mat-card-actions class="text-right">
+      <p>还没有账户？<a href="">注册</a></p>
+      <p>忘记密码？<a href="">找回</a></p>
+    </mat-card-actions>
+  </mat-card>
+</form>
